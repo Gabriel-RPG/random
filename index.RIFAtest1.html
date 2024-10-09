@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado DA RIFA (FONE BLUETOOH)</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DADO DA RIFA</h1>
+    <button id="roll-button">Sortear</button>
+    <h2 id="result">Resultado: </h2>
+
+    <script>
+        document.getElementById('roll-button').addEventListener('click', function() {
+            const result = rollLoadedDice();
+            document.getElementById('result').textContent = 'Resultado: ' + result;
+        });
+
+        function rollLoadedDice() {
+            return 11; // Sempre retornando 11
+        }
+    </script>
+</body>
+</html>
